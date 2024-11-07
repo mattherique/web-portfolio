@@ -3,19 +3,72 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0e0d29;
+  --foreground: #fff;
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    rgb(138, 185, 255),
+    rgb(138, 185, 255) 5%,
+    rgb(138, 185, 255) 60%,
+    rgb(138, 185, 255) 95%
+  );
+  --main-bg-dark: conic-gradient(
+    from var(--border-angle),
+    #1c1837,
+    #1c1837 5%,
+    #1c1837 60%,
+    #1c1837 95%
+  );
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.border-animation{
+  transition: margin 150ms;
+  border: 2px solid transparent;
+  border-radius: 6px;
+}
+
+.border-animation[data-dark-mode=true]{
+  border: 2px solid transparent;
+  border-radius: 6px;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, rgb(81, 0, 255), rgb(55, 0, 255) 99%, transparent);
+  background: 
+    var(--main-bg-dark) padding-box,
+    var(--gradient-border) border-box, 
+    var(--main-bg) border-box;
+    animation: bg-spin 3s linear infinite;
+  background-position: center center;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@keyframes an{
+  from{
+      opacity: 0;
+      transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+  }
+  to{
+      opacity: 1;
+      transform: perspective(500px) translate3d(0, 0, 0);
+  }
+}
+
+.text-animation{
+  animation: an 500ms ease-out 1 both;
+}
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
 }
