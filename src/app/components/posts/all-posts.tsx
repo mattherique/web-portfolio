@@ -1,31 +1,22 @@
+import Link from "next/link"
 import React from "react"
-import { getBlogPosts } from "@/app/utils/mdx-manager"
 
-import Teste from '@/app/components/teste.mdx'
+import { postsPreview } from "../../../constants/posts"
 
 const AllPosts = () => {
-    // const latestPosts = getBlogPosts()
-
-    // const sortedPosts = latestPosts.sort((a, b) => { 
-    //     if(new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)){
-    //         return -1
-    //     }
-
-    //     return 1
-    // })
-
     return (
-        <div>
-            {/* {sortedPosts.map((post, index) => {
-                {console.log(post)}
-                return(
-                
-                <div key={post.slug}>
-                    <p>{post.metadata.title}</p>
-                    {post.content}
-                </div>
-            )})} */}
-            <Teste />
+        <div className="my-8">
+            {postsPreview.map((post, index) => (
+                <Link href={post.url} key={post.id}>
+                    <div className="w-full rounded-md border-[1px] border-[#f1f1f1] hover:-mt-1 transition-all shadow-xl duration-200 p-6 text-black border-animation">
+                        <div className="mb-4">
+                            <h3 className="text-xl font-semibold">{post.title}</h3>
+                            <p className="font-extralight tracking-tight text-gray-600">{`Publish Date: ${post.date}`}</p>
+                        </div>
+                        <p className="text-lg">{post.description}</p>
+                    </div>
+                </Link>
+            ))}
         </div>
     )
 }

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #0e0d29;
+  --background: #fff;
   --foreground: #fff;
   --border-angle: 0turn;
   --main-bg: conic-gradient(
@@ -15,10 +15,10 @@
   );
   --main-bg-dark: conic-gradient(
     from var(--border-angle),
-    #1c1837,
-    #1c1837 5%,
-    #1c1837 60%,
-    #1c1837 95%
+    #fff,
+    #fff 5%,
+    #fff 60%,
+    #fff 95%
   );
   --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
 }
@@ -35,15 +35,15 @@ body {
   border-radius: 6px;
 }
 
-.border-animation[data-dark-mode=true]{
+.border-animation:hover{
   border: 2px solid transparent;
   border-radius: 6px;
-  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, rgb(81, 0, 255), rgb(55, 0, 255) 99%, transparent);
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, rgb(81, 0, 255), #abd9f3 99%, transparent);
   background: 
     var(--main-bg-dark) padding-box,
     var(--gradient-border) border-box, 
     var(--main-bg) border-box;
-    animation: bg-spin 3s linear infinite;
+    animation: bg-spin 6s linear infinite;
   background-position: center center;
 }
 
@@ -71,4 +71,31 @@ body {
   syntax: "<angle>";
   inherits: true;
   initial-value: 0turn;
+}
+
+.chalk-text{
+  font-family: cursive;
+  font-weight: bold;
+  padding: 0 .4em;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  margin: 2rem auto 0;
+  filter: url(#chalk)
+}
+
+.chalk-text[data-color=light-blue]{
+  color: rgb(106, 155, 172);
+}
+
+.chalk-text[data-color=yellow]{
+  color: rgb(204, 204, 20);
+}
+
+.chalk-text[data-color=red]{
+  color: rgb(194, 88, 88);
+}
+
+.chalk-text[data-color=pink]{
+  color: rgb(187, 139, 212);
 }
