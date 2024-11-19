@@ -16,9 +16,9 @@ const MainPage = () => {
         <>  
             <div className='mx-12 xl:mx-auto max-w-6xl h-full flex flex-col gap-y-20'>
                 <div className='w-[65%]'>
-                    <h1 className='text-5xl mt-20 text-animation text-black font-semibold'>Hey! I'm Mathew, a software developer</h1>
+                    <h1 className='text-5xl mt-20 text-animation text-black font-semibold'>`{"Hey! I'm Mathew, a software developer"}`</h1>
                     <div className='mt-10 flex flex-col gap-y-4'>
-                        <p className='text-xl text-black text-animation'>I'm engaged to build great and unique experiences for users.</p>
+                        <p className='text-xl text-black text-animation'>{"I'm engaged to build great and unique experiences for users."}</p>
                         <p className='text-xl text-black text-animation'>
                             Working my career extracting the most that a web app can offer, leading to optimal and 
                             <span data-color="light-blue" className='chalk-text'>simple code</span> with <span data-color="yellow" className='chalk-text'>flexibility</span>.
