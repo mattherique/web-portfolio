@@ -103,3 +103,26 @@ body {
 .font-fira-code{
   font-family: "Fira Code", serif;
 }
+
+.code-block{
+  overflow: auto;
+  padding: 16px;
+  border-radius: 8px;
+  border-color: #e8e8e8;
+}
+
+.markdown h1 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.markdown h3{
+  font-size: 26px;
+  color: rgb(37 42 49);
+  margin: 12px 0;
+}
+
+.markdown section{
+  margin: 16px 0;
+}

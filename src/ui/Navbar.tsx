@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
                 </button>
                 <button className='text-black hover:bg-slate-800 py-2 px-3 rounded-md transition-all'>Projects</button>
                 <button className='text-black hover:bg-slate-800 py-2 px-3 rounded-md transition-all'>Contact</button>
-                <button className='text-black hover:bg-slate-800 py-2 px-3 rounded-md transition-all'>Posts</button>
+                <Link href="/posts" className='text-black hover:bg-slate-800 py-2 px-3 rounded-md transition-all'>Posts</Link>
             </div>
         </nav>
     )
