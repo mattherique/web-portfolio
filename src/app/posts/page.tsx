@@ -1,15 +1,13 @@
 
-import { allPosts } from "contentlayer/generated"
+// import { allPosts } from "contentlayer/generated"
 
 export default function Page() {
 
-    const posts =  allPosts.map((post) => ({
-      params: {
-        slug: post.slug,
-      },
-    }))
-
-    console.log(posts)
+    // const posts =  allPosts.map((post) => ({
+    //   params: {
+    //     slug: post.slug,
+    //   },
+    // }))
      
     return (
         <div className='mx-12 xl:mx-auto max-w-6xl h-full flex flex-col gap-y-20'>

@@ -10,10 +10,10 @@ export const Post = defineDocumentType(() => ({
   // option to prevent an error on generation. We'll discuss
   // this option later. For now, we'll add an empty object.
   fields: {
-    title: {
-      type: "string",
-      required: true,
-    },
+    // title: {
+    //   type: "string",
+    //   required: true,
+    // },
   },
   computedFields: {
     slug: {
