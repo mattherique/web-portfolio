@@ -4,9 +4,9 @@ title: "Migrating from JavaScript to TypeScript: A Simple guide"
 
 # Migrating from JavaScript to TypeScript: A Simple guide
 
-<div className="flex flex-col justify-center items-center gap-y-12 pb-40">
+<div className="flex flex-col justify-center items-center pb-40">
     <section>
-        <h3 className="text-black text-2xl mb-2">Introduction:</h3>
+        <h3 id="introduction" className="text-black text-2xl mb-2">Introduction:</h3>
         <div className="flex flex-col gap-y-4">
             <p className="text-xl text-gray-600">TypeScript has gained a lot of traction in the developer community for the robustness it brings to your code. Due to its static typing and other TypeScript features like interfaces and type annotations, it is very effective especially when dealing with large codebases. TypeScript allows developers to precisely define the expected shape of objects and function parameters, resulting in code that's easier to understand and maintain. But how you do you use it if you already started your project with javascript ?</p>
             <p className="text-xl text-gray-600">It seams very tricky, but here you will learn how to make this transition without interfere in you actual codebase.</p>
@@ -16,8 +16,8 @@ title: "Migrating from JavaScript to TypeScript: A Simple guide"
         <h3 className="text-black text-2xl mb-2">Step one:</h3>
         <div className="flex flex-col gap-y-4">
             <p className="text-xl text-gray-600">First of all, we need TypeScript installed globally on your machine, you can install running the following command:</p>
-            <div className="code-block text-black border-[1px] rounded-sm bg-slate-100 p-7 max-w-3xl overflow-x-scroll py-4">
-                <p className="text-black font-fira-code text-sm">npm install -g typescript</p>
+            <div className="code-block text-black border-[1px] rounded-sm bg-slate-100 p-7 max-w-3xl overflow-x-scroll py-4 shadow-lg">
+                <p className="text-black font-fira-code text-sm">npm install -g TypeScript</p>
             </div>
         </div>
     </section>
@@ -25,11 +25,11 @@ title: "Migrating from JavaScript to TypeScript: A Simple guide"
         <h3 className="text-black text-2xl mb-2">Step Two:</h3>
         <div className="flex flex-col gap-y-4">
             <p className="text-xl text-gray-600">Like javascript, TypeScript needs a config file (tsconfig.json), we can create it running the following command:</p>
-            <div className="code-block border-[1px] rounded-sm bg-slate-100 p-7 max-w-3xl overflow-x-auto">
+            <div className="code-block border-[1px] rounded-sm bg-slate-100 p-7 max-w-3xl overflow-x-auto shadow-lg">
                 <p className="text-black font-fira-code text-sm">tsc --init</p>
             </div>
-            <p className="text-xl text-gray-600">In this file you can configure how your project compile TS files, so if you are using a framework like NextJs or a library like React, you can adapt the compiler to accept JSX files.</p>
-            <div className="code-block border-[1px] text-black rounded-sm bg-slate-100 p-7 max-w-3xl">
+            <p className="text-xl text-gray-600">In this file you can configure how your project compile TS files, so if you are using a framework like Next.js or a library like React, you can adapt the compiler to support JSX files.</p>
+            <div className="code-block border-[1px] text-black rounded-sm bg-slate-100 p-7 max-w-3xl shadow-lg">
                 ```json
                 {
                     "compilerOptions": {
@@ -50,14 +50,14 @@ title: "Migrating from JavaScript to TypeScript: A Simple guide"
     <section>
         <h3 className="text-black text-2xl mb-2">Step Three:</h3>
         <div className="flex flex-col gap-y-4">
-            <p className="text-xl text-gray-600">Rename .js files to .ts files, this step is necessary only if you use the typescript compiler directly, so if you are using a framework like NextJs, it's compiler runs both .ts and .js files in build.</p>
+            <p className="text-xl text-gray-600">Rename .js/.jsx files to .ts/tsx files, this step is only necessary if you use the TypeScript compiler directly, so if you are using a framework like Next.js, it's compiler handles both .ts and .js files in build.</p>
             <p className="text-xl text-gray-600">Before the change:</p>
-            <div className="code-block border-[1px] rounded-sm bg-slate-100 max-w-3xl">
+            <div className="code-block border-[1px] rounded-sm bg-slate-100 max-w-3xl shadow-lg">
                 <p className="text-black font-fira-code text-sm">react-post.js</p>
                 <p className="text-black font-fira-code text-sm">react-post-component.jsx</p>
             </div>
             <p className="text-xl text-gray-600">After the change:</p>
-            <div className="code-block border-[1px] rounded-sm bg-slate-100 max-w-3xl overflow-x-auto">
+            <div className="code-block border-[1px] rounded-sm bg-slate-100 max-w-3xl overflow-x-auto shadow-lg">
                 <p className="text-black font-fira-code text-sm">react-post.ts</p>
                 <p className="text-black font-fira-code text-sm">react-post-component.tsx</p>
             </div>
@@ -68,7 +68,7 @@ title: "Migrating from JavaScript to TypeScript: A Simple guide"
         <h3 className="text-black text-2xl mb-2">Step Four:</h3>
         <div className="flex flex-col gap-y-4">
             <p className="text-xl text-gray-600">Due to the changes made before, now we have some type errors, so here is an exemple of how we can add a type notation.</p>
-            <div className="code-block text-black border-[1px] rounded-sm bg-slate-100 p-7 max-w-3xl overflow-x-scroll py-4">
+            <div className="code-block text-black border-[1px] rounded-sm bg-slate-100 p-7 max-w-3xl overflow-x-scroll py-4 shadow-lg">
                 ```javascript
                 // Before type notation
                 function sum(a, b) {
@@ -78,18 +78,26 @@ title: "Migrating from JavaScript to TypeScript: A Simple guide"
                 // After type notation
                 function sum(a: number, b: number): number {
                     return a + b;
-                }`
+                }
                 ```
             </div>
             <p className="text-xl text-gray-600">This can scalate very quickly with dynamic components that have different types of data, maybe you have to refactor the code to be more "type friendly" or go with "any" type to avoid these scenarios.</p>
         </div>
     </section>
     <section>
-        <h3 className="text-black text-2xl mb-2">Step Five:</h3>
+        <h3 className="text-black text-2xl mb-2">Final considerations:</h3>
         <p className="text-xl text-gray-600">Since TypeScript get benefits of type checks, during this transition, you want to gradually change the stricter options, enabling all that you can and that will not affect your project for now, so options like 
         <span className="font-fira-code text-sm text-red-600"> ”strictNullChecks”: true </span>, 
         <span className="font-fira-code text-sm text-red-600"> ”noImplicitAny”: true </span> and
         <span className="font-fira-code text-sm text-red-600"> ”strict”: true. </span>will make you catch more errors during the development process.</p>
+    </section>
+    <section>
+        <p className="text-xl text-gray-600">Sometimes TypeScript is not very clear when dealing with type errors, especialy if the logic is more complex, 
+        vscode has a tool that can help to visualize more clearly the problem called 
+        <a id="ts-extension" 
+            className="text-red-600 cursor-pointer" 
+            onClick={() => window.open('https://github.com/yoavbls/pretty-ts-errors')}
+        >Pretty TypeScript Errors</a></p>
     </section>
     <section>
         <h3 className="text-black text-2xl mb-2">Conclusion:</h3>

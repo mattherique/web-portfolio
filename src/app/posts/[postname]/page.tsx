@@ -20,10 +20,12 @@ const Page = () => {
     console.log(currentPost)
 
     return (
-        <div className='flex mx-12 xl:mx-auto w-3xl max-w-3xl font-[family-name:var(--font-wotfard)] justify-center'>
-            <div className='mt-16'>
-                <div className='flex w-3xl'>
-                    <MarkdownContent post={currentPost}/>
+        <div className='w-full flex flex-col items-center justify-center'>
+            <div className='flex mx-12 xl:mx-auto w-3xl max-w-3xl font-[family-name:var(--font-wotfard)] justify-center'>
+                <div className='mt-16'>
+                    <div className='flex w-3xl'>
+                        <MarkdownContent post={currentPost}/>
+                    </div>
                 </div>
             </div>
         </div>
