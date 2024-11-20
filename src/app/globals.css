@@ -109,6 +109,7 @@ body {
   padding: 16px;
   border-radius: 8px;
   border-color: #e8e8e8;
+  width: 100%;
 }
 
 .markdown h1 {
@@ -125,4 +126,5 @@ body {
 
 .markdown section{
   margin: 16px 0;
+  width: 100%;
 }

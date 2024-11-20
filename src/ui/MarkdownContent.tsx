@@ -7,7 +7,7 @@ const MarkdownContent = ({post} : {post: Post}) => {
     const MDXContent = useMDXComponent(post.body.code)
 
     return (
-        <div className='text-black markdown'>
+        <div className='text-black markdown w-full'>
             <MDXContent/>
         </div>
     );

@@ -13,7 +13,7 @@ const TsExtensionTipSection = () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const tsExtensionElement = annotate(entry.target as HTMLElement, { type: 'underline', color: 'red' });
+                const tsExtensionElement = annotate(entry.target as HTMLElement, { type: 'underline', color: '#ff9999' });
                 const ag = annotationGroup([
                     tsExtensionElement,
                     viewClearElement,
@@ -32,11 +32,11 @@ const TsExtensionTipSection = () => {
     return (
         <p className="text-xl text-gray-600 ">
             TypeScript can sometimes be unclear when it comes to <span className='whitespace-nowrap' id="type-error">type errors, </span>, 
-            especially in complex logic. To <span className='whitespace-nowrap' id="view-clear">make things easier</span>, VSCode offers a tool called the problem called 
+            especially in complex logic. To <span className='whitespace-nowrap' id="view-clear">make things easier</span>, VSCode offers a tool called
             <a id="ts-extension" 
-                className="text-red-600 cursor-pointer whitespace-nowrap" 
+                className="text-[#ff9999] cursor-pointer whitespace-nowrap" 
                 onClick={() => window.open('https://github.com/yoavbls/pretty-ts-errors')}
-            > Pretty TypeScript Errors</a> which helps<span className='whitespace-nowrap' id="help-txt">visualize the issue more clearly</span>. This tool enhances the error messages, making it easier to understand what’s going wrong in your code.
+            > Pretty TypeScript Errors</a> which helps<span className='whitespace-nowrap' id="help-txt"> more clearly</span>. This tool enhances the error messages, making it easier to understand what’s going wrong in your code.
         </p>
     );
 };

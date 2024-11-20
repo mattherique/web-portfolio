@@ -3,13 +3,13 @@ import TsIntroductionSection from '../../app/components/posts/typescript-transit
 
 # Migrating from JavaScript to TypeScript: A Simple guide
 
-<div className="flex flex-col justify-center items-center pb-40">
+<div className="flex flex-col justify-center items-center pb-40 w-full">
     <TsIntroductionSection/>
     <section>
         <h3 className="text-black text-2xl mb-2">Step one:</h3>
         <div className="flex flex-col gap-y-4">
             <p className="text-xl text-gray-600">First of all, we need TypeScript installed globally on your machine, you can install running the following command:</p>
-            <div className="code-block text-black border-[1px] rounded-sm bg-slate-100 p-7 max-w-3xl overflow-x-scroll py-4 shadow-lg">
+            <div className="code-block text-black border-[1px] rounded-sm bg-slate-100 p-7 w-full overflow-x-scroll py-4 shadow-lg">
                 <p className="text-black font-fira-code text-sm">npm install -g TypeScript</p>
             </div>
         </div>
@@ -18,25 +18,21 @@ import TsIntroductionSection from '../../app/components/posts/typescript-transit
         <h3 className="text-black text-2xl mb-2">Step Two:</h3>
         <div className="flex flex-col justify-center items-center gap-y-4">
             <p className="text-xl text-gray-600">Like javascript, TypeScript needs a config file (tsconfig.json), we can create it running the following command:</p>
-            <div className="code-block border-[1px] rounded-sm bg-slate-100 p-7 max-w-3xl overflow-x-auto shadow-lg">
+            <div className="code-block border-[1px] rounded-sm bg-slate-100 p-7 w-full overflow-x-auto shadow-lg">
                 <p className="text-black font-fira-code text-sm">tsc --init</p>
             </div>
             <p className="text-xl text-gray-600">In this file you can configure how your project compile TS files, so if you are using a framework like Next.js or a library like React, you can adapt the compiler to support JSX files.</p>
-            <div className="code-block w-80 sm:w-auto border-[1px] text-black rounded-sm bg-slate-100 p-7 max-w-3xl shadow-lg">
-                ```json
-                {
-                    "compilerOptions": {
-                        "target": "ES2017", // Specifies the target ECMAScript version for the compiled JavaScript.
-                        "lib": ["dom", "dom.iterable", "esnext"], // Specifies the library files to be included in the compilation.
-                        "allowJs": true, // Allows JavaScript files to be compiled.
-                        "skipLibCheck": true, // Skips type checking of declaration files.
-                        "strict": true, // Enables all strict type-checking options.
-                        "esModuleInterop": true, // Enables interoperability between CommonJS and ES Modules.
-                        "module": "esnext", // Specifies the module code generation method.
-                        "jsx": "preserve" // Keeps JSX as JSX instead of transforming it.
-                    }
-                }
-                ```
+            <div className="code-block text-black border-[1px] rounded-sm bg-slate-100 p-7 overflow-x-scroll py-4 shadow-lg">
+                <p className='font-fira-code text-blue-900'>"compilerOptions:<span className='text-purple-400'>{" {"}</span></p>
+                <p className='ml-9 text-emerald-700 whitespace-nowrap font-fira-code'>"target": <span className='text-orange-800'>"ES2017" </span><span className='text-gray-600'>// Specifies the target ECMAScript version for the compiled JavaScript.</span></p>
+                <p className='ml-9 text-emerald-700 whitespace-nowrap font-fira-code'>"lib": <span className='text-orange-800'>["dom", "dom.iterable", "esnext"] </span><span className='text-gray-600'>// Specifies the library files to be included in the compilation.</span></p>
+                <p className='ml-9 text-emerald-700 whitespace-nowrap font-fira-code'>"allowJs": <span className='text-orange-800'>{"true "}</span><span className='text-gray-600'>// Allows JavaScript files to be compiled.</span></p>
+                <p className='ml-9 text-emerald-700 whitespace-nowrap font-fira-code'>"skipLibCheck": <span className='text-orange-800'>{"true "}</span><span className='text-gray-600'>// Skips type checking of declaration files.</span></p>
+                <p className='ml-9 text-emerald-700 whitespace-nowrap font-fira-code'>"strict": <span className='text-orange-800'>{"true "}</span><span className='text-gray-600'>// Enables all strict type-checking options.</span></p>
+                <p className='ml-9 text-emerald-700 whitespace-nowrap font-fira-code'>"esModuleInterop": <span className='text-orange-800'>{"true "}</span><span className='text-gray-600'>// Enables interoperability between CommonJS and ES Modules.</span></p>
+                <p className='ml-9 text-emerald-700 whitespace-nowrap font-fira-code'>"module": <span className='text-orange-800'>"esnext" </span><span className='text-gray-600'>// Specifies the module code generation method.</span></p>
+                <p className='ml-9 text-emerald-700 whitespace-nowrap font-fira-code'>"jsx": <span className='text-orange-800'>"preserve" </span><span className='text-gray-600'>// Keeps JSX as JSX instead of transforming it.</span></p>
+                <span className='text-purple-400'>{" }"}</span>
             </div>
         </div>
     </section>
@@ -45,12 +41,12 @@ import TsIntroductionSection from '../../app/components/posts/typescript-transit
         <div className="flex flex-col gap-y-4">
             <p className="text-xl text-gray-600">Rename .js/.jsx files to .ts/tsx files, this step is only necessary if you use the TypeScript compiler directly, so if you are using a framework like Next.js, it's compiler handles both .ts and .js files in build.</p>
             <p className="text-xl text-gray-600">Before the change:</p>
-            <div className="code-block border-[1px] rounded-sm bg-slate-100 max-w-3xl shadow-lg">
+            <div className="code-block border-[1px] rounded-sm bg-slate-100 w-full shadow-lg">
                 <p className="text-black font-fira-code text-sm">react-post.js</p>
                 <p className="text-black font-fira-code text-sm">react-post-component.jsx</p>
             </div>
             <p className="text-xl text-gray-600">After the change:</p>
-            <div className="code-block border-[1px] rounded-sm bg-slate-100 max-w-3xl overflow-x-auto shadow-lg">
+            <div className="code-block border-[1px] rounded-sm bg-slate-100 w-full overflow-x-auto shadow-lg">
                 <p className="text-black font-fira-code text-sm">react-post.ts</p>
                 <p className="text-black font-fira-code text-sm">react-post-component.tsx</p>
             </div>
@@ -61,18 +57,19 @@ import TsIntroductionSection from '../../app/components/posts/typescript-transit
         <h3 className="text-black text-2xl mb-2">Step Four:</h3>
         <div className="flex flex-col gap-y-4">
             <p className="text-xl text-gray-600">Due to the changes made before, now we have some type errors, so here is an exemple of how we can add a type notation.</p>
-            <div className="code-block text-black border-[1px] rounded-sm bg-slate-100 p-7 max-w-3xl overflow-x-scroll py-4 shadow-lg">
-                ```javascript
-                // Before type notation
-                function sum(a, b) {
-                    return a + b;
-                }
-
-                // After type notation
-                function sum(a: number, b: number): number {
-                    return a + b;
-                }
-                ```
+            <div className="code-block text-black border-[1px] rounded-sm bg-slate-100 overflow-x-scroll py-4 shadow-lg flex flex-col gap-y-4">
+                <div>
+                    <p className='font-fira-code text-gray-600'>// Before type notation</p>
+                    <p className='font-fira-code text-purple-700'>function <span className='text-lime-600'>sum</span><span className='text-purple-400'>(</span><span className='text-orange-600'>a, b</span><span className='text-purple-400'>)</span><span className='text-purple-400'>{"{"}</span></p>
+                    <p className='font-fira-code ml-7 text-purple-700'>return <span className='text-gray-600 '>a + b;</span></p>
+                    <p className='font-fira-code text-purple-400'>{"}"}</p>
+                </div>
+                <div>
+                    <p className='font-fira-code text-gray-600'>// After type notation</p>
+                    <p className='font-fira-code text-purple-700'>function <span className='text-lime-600'>sum</span><span className='text-purple-400'>(</span><span className='text-orange-600'>a: <span className='text-blue-400'>number</span>, b: <span className='text-blue-400'>number</span></span><span className='text-purple-400'>): <span className='text-blue-400'>number</span></span><span className='text-purple-400'>{" {"}</span></p>
+                    <p className='font-fira-code ml-7 text-purple-700'>return <span className='text-gray-600 '>a + b;</span></p>
+                    <p className='font-fira-code text-purple-400'>{"}"}</p>
+                </div>
             </div>
             <p className="text-xl text-gray-600">This can scalate very quickly with dynamic components that have different types of data, maybe you have to refactor the code to be more "type friendly" or go with "any" type to avoid these scenarios.</p>
         </div>
@@ -80,9 +77,9 @@ import TsIntroductionSection from '../../app/components/posts/typescript-transit
     <section>
         <h3 className="text-black text-2xl mb-2">Final considerations:</h3>
         <p className="text-xl text-gray-600">Since TypeScript get benefits of type checks, during this transition, you want to gradually change the stricter options, enabling all that you can and that will not affect your project for now, so options like 
-        <span className="font-fira-code text-sm text-red-600"> ”strictNullChecks”: true </span>, 
-        <span className="font-fira-code text-sm text-red-600"> ”noImplicitAny”: true </span> and
-        <span className="font-fira-code text-sm text-red-600"> ”strict”: true. </span>will make you catch more errors during the development process.</p>
+        <span className="font-fira-code text-lg text-[#ff9999]"> ”strictNullChecks” </span>, 
+        <span className="font-fira-code text-lg text-[#ff9999]"> ”noImplicitAny” </span> and
+        <span className="font-fira-code text-lg text-[#ff9999]"> ”strict” </span>will make you catch more errors during the development process.</p>
     </section>
     <section>
         <TsExtensionTipSection />
