@@ -126,3 +126,18 @@ body {
 .markdown section{
   margin: 16px 0;
 }
+
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    scale: 0.5;
+  } to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.block-appear{
+  animation: appear 1000ms ease-out 1 both;
+}
