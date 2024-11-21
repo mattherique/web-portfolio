@@ -12,7 +12,6 @@
         "dependsOn": [
           "^build"
         ],
-        "env": ["SOME_OTHER_ENV_VAR"],
         "outputs": ["dist/**"]
       }
     },
