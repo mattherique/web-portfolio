@@ -7,7 +7,7 @@ type SkillBlockProps = {
 
 const SkillBlock = ({icon, text}: SkillBlockProps) => {
     return (
-        <div className='border p-3 flex flex-col gap-y-2 items-center shadow-xl rounded-xl w-32 basis-[128px] hidden-animation animation-skill-block'>
+        <div className='border p-3 flex flex-col gap-y-2 items-center shadow-xl flex-grow rounded-xl w-32 basis-[128px] hidden-animation animation-skill-block'>
             {icon}
             <p>{text}</p>
         </div>

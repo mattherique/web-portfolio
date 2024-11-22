@@ -19,7 +19,7 @@ const Page = () => {
 
     return (
         <div className='w-full flex flex-col items-center justify-center'>
-            <div className='flex mx-12 px-5 xl:mx-auto w-full max-w-4xl font-[family-name:var(--font-wotfard)] justify-center mt-16'>
+            <div className='flex mx-12 px-5 xl:mx-auto w-full max-w-3xl font-[family-name:var(--font-wotfard)] justify-center mt-16'>
                 <div className='flex w-full'>
                     <MarkdownContent post={currentPost}/>
                 </div>

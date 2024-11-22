@@ -3,16 +3,18 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <nav className='h-16 flex items-center justify-between mx-12 xl:mx-auto max-w-6xl'>
-            <Link href="/" className='cursor-pointer'>
-                <p className='text-lg text-black'>Matheus Azevedo</p>
-            </Link>
-            <div className='gap-x-10 hidden md:flex'>
-                <Link href="/about" className='text-black hover:bg-slate-800 py-2 px-3 rounded-md transition-all'>
-                    About
+        <nav className='w-full flex'>
+            <div className='h-16 flex items-center justify-between mx-4 w-full sm:mx-auto max-w-3xl xl:max-w-6xl'>
+                <Link href="/" className='cursor-pointer hover:bg-sky-100 py-2 px-3 rounded-md transition-all'>
+                    <p className='text-lg text-gray-600'>Matheus Azevedo</p>
                 </Link>
-                <Link href="/contact" className='text-black hover:bg-slate-800 py-2 px-3 rounded-md transition-all'>Contact</Link>
-                <Link href="/posts" className='text-black hover:bg-slate-800 py-2 px-3 rounded-md transition-all'>Posts</Link>
+                <div className='gap-x-10 hidden md:flex'>
+                    <Link href="/about" className='text-gray-600 hover:bg-sky-100 py-2 px-3 rounded-md transition-all'>
+                        About
+                    </Link>
+                    <Link href="/contact" className='text-gray-600 hover:bg-sky-100 py-2 px-3 rounded-md transition-all'>Contact</Link>
+                    <Link href="/posts" className='text-gray-600 hover:bg-sky-100 py-2 px-3 rounded-md transition-all'>Posts</Link>
+                </div>
             </div>
         </nav>
     )

@@ -31,7 +31,7 @@ body {
 
 .border-animation{
   transition: margin 150ms;
-  border: 2px solid transparent;
+  border: 2px solid #f8f8f8;
   border-radius: 6px;
 }
 
@@ -168,20 +168,22 @@ body {
   @apply w-full flex gap-y-6 gap-x-3 flex-wrap
 }
 
-.animation-block > div:nth-child(2){
-  transition-delay: 600ms;
-}
+@media (min-width: 768px){
+  .animation-block > div:nth-child(2){
+    transition-delay: 600ms;
+  }
 
-.animation-block > div:nth-child(3){
-  transition-delay: 1200ms;
-}
+  .animation-block > div:nth-child(3){
+    transition-delay: 1200ms;
+  }
 
-.animation-block > div:nth-child(4){
-  transition-delay: 1800ms;
-}
+  .animation-block > div:nth-child(4){
+    transition-delay: 1800ms;
+  }
 
-.animation-skill-block:nth-child(1){
-  transition-delay: 0ms;
+  .animation-skill-block:nth-child(1){
+    transition-delay: 0ms;
+  }
 }
 
 .animation-skill-block:nth-child(2){
@@ -211,12 +213,15 @@ body {
 .animation-skill-block:nth-child(8){
   transition-delay: 1050ms;
 }
+
 .animation-skill-block:nth-child(9){
   transition-delay: 1200ms;
 }
+
 .animation-skill-block:nth-child(10){
   transition-delay: 1350ms;
 }
+
 .animation-skill-block:nth-child(11){
   transition-delay: 1500ms;
 }
