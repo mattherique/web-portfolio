@@ -1,15 +1,22 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 type SkillBlockProps = {
     icon: React.ReactNode;
     text: string;
+    link?: string;
 }
 
-const SkillBlock = ({icon, text}: SkillBlockProps) => {
+const SkillBlock = ({icon, text, link=''}: SkillBlockProps) => {
+    const handleLinkRedirect = () => {
+        window.open(link, '_blank');
+    }
+
     return (
-        <div className='border p-3 flex flex-col gap-y-2 items-center shadow-xl flex-grow rounded-xl w-32 basis-[128px] hidden-animation animation-skill-block'>
+        <div 
+            data-link={link !== ''}
+            className='border data-[link=true]:cursor-pointer p-3 flex flex-col gap-y-2 items-center shadow-xl flex-grow rounded-xl w-32 basis-[128px] hidden-animation animation-skill-block'>
             {icon}
-            <p>{text}</p>
+            <a onClick={handleLinkRedirect}>{text}</a>
         </div>
     );
 };
