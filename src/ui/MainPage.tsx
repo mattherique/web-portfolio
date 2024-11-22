@@ -35,11 +35,11 @@ const MainPage = () => {
     return (  
         <>  
             <div className='mx-12 xl:mx-auto max-w-6xl h-full flex flex-col gap-y-20'>
-                <div className='w-auto md:w-[65%]'>
+                <div className='w-auto md:w-[70%]'>
                     <h1 className='text-5xl mt-20 text-animation text-black font-semibold'>{"Hey! I'm Mathew, a software developer"}</h1>
                     <div className='mt-10 flex text-black flex-col gap-y-4'>
-                        <p className='text-xl text-animation'>{"With nearly three years of web development experience, I focus on maximizing the potential of web applications through "}<span id="code-quality">{"clean, scalable, and flexible code, "}</span>{"Currently, I work on a project using Next.js and React, where I am responsible for maintaining a simple yet robust code structure. I also oversee the team's contributions, ensuring code quality and adherence to"}<span id="best-practices">{"best practices"}</span>.</p>
-                        <p className='text-xl text-animation'>{"Passionate about continuous growth, I am "}<span id="oportunities">{"always seeking opportunities"}</span>{"to expand my expertise in both"}<span id="front-end">{"front-end"}</span>{"and"}<span id="back-end">{"back-end"}</span>{"web development."}</p>
+                        <p className='text-xl text-animation'>{"With nearly three years of web development experience, I focus on maximizing the potential of web applications through "}<span className='whitespace-nowrap' id="code-quality">{"clean, scalable, and flexible code, "}</span>{"currently, I work on a project using Next.js and React, where I am responsible for maintaining a simple yet robust code structure. I also oversee the team's contributions, ensuring code quality and adherence to"}<span id="best-practices">{"best practices"}</span>.</p>
+                        <p className='text-xl text-animation'>{"Passionate about continuous growth, I am "}<span className='whitespace-nowrap' id="oportunities">{"always seeking opportunities "}</span>{"to expand my expertise in both"}<span className='whitespace-nowrap' id="front-end">{" front-end "}</span>{"and"}<span className='whitespace-nowrap' id="back-end">{" back-end "}</span>{"web development."}</p>
                         <div>
                             <div className='flex items-center gap-x-3 mt-3'>
                                 <Link href='/posts'>
