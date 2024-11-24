@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
 
-import { FiMenu } from "react-icons/fi";
-
 const Navbar = () => {
     
     return (
@@ -17,14 +15,6 @@ const Navbar = () => {
                     </Link>
                     <Link href="/contact" className='text-gray-600 hover:bg-sky-100 py-2 px-3 rounded-md transition-all'>Contact</Link>
                     <Link href="/posts" className='text-gray-600 hover:bg-sky-100 py-2 px-3 rounded-md transition-all'>Posts</Link>
-                </div>
-                <div>
-                    <FiMenu className='text-black w-6 h-6'/>
-                    <ul>
-                        <li>About</li>
-                        <li>Contact</li>
-                        <li>Posts</li>
-                    </ul>
                 </div>
             </div>
         </nav>

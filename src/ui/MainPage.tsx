@@ -34,7 +34,7 @@ const MainPage = () => {
 
     return (  
         <>  
-            <div className='w-full h-full flex flex-col justify-center gap-y-20 image-background'>
+            <div className='w-full h-[calc(100vh-4rem)] flex flex-col gap-y-20 image-background'>
                 <div className='mx-4 xl:mx-auto max-w-3xl xl:max-w-6xl'>
                     <div className='w-auto xl:w-[70%]'>
                         <h1 className='text-5xl mt-20 text-animation text-black font-semibold'>{"Hey! I'm Mathew, a software developer"}</h1>

@@ -1,6 +1,8 @@
-import React from 'react';
-
+// Hooks
 import { useMDXComponent } from "next-contentlayer/hooks"
+
+// Libs
+import React from 'react';
 import { Post } from 'contentlayer/generated';
 
 const MarkdownContent = ({post} : {post: Post}) => {

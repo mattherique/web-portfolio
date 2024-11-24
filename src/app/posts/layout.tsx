@@ -1,6 +1,9 @@
+// Libs
 import React from "react";
-import Navbar from "@/ui/Navbar";
 import { Metadata } from "next";
+
+// Ui
+import Navbar from "@/ui/Navbar";
 
 export const metadata: Metadata = {
   title: "Matheus | Posts",

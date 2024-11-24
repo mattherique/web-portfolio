@@ -1,4 +1,7 @@
+// Libs
 import React from "react";
+
+// UI Components
 import Navbar from "@/ui/Navbar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

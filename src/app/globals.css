@@ -226,15 +226,15 @@ body {
   transition-delay: 1500ms;
 }
 
-.image-background{
+.image-background {
   background: 
-    linear-gradient(to bottom, white, rgba(255, 255, 255, 0) 20%), /* Top gradient */
-    linear-gradient(to top, white, rgba(255, 255, 255, 0) 20%),  /* Bottom gradient */
-    url('/cartoon-cloud.jpg'); /* Background image */
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling */
-  animation: parallax 10s infinite alternate;
+    linear-gradient(to bottom, white, rgba(255, 255, 255, 0) 20%),
+    linear-gradient(to top, white, rgba(255, 255, 255, 0) 20%),
+    url('/cartoon-cloud.jpg');
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: parallax 10s infinite alternate ease-in-out;
 }
 
 .nav-animation{
