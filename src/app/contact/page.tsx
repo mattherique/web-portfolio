@@ -21,7 +21,7 @@ const ContactMe = () => {
             <div className='flex mx-12 px-5 xl:mx-auto w-full max-w-3xl font-[family-name:var(--font-wotfard)] justify-center mt-16'>
                 <div className='flex flex-col w-full text-black'>
                     <div className='flex flex-col gap-y-8'>
-                        <div className='flex flex-wrap xl:flex-col gap-8 hidden-animation'>
+                        <div className='flex flex-wrap xl:flex-row gap-8 hidden-animation'>
                             <SkillBlock
                                 icon={<HiOutlineMailOpen className='w-16 h-16 text-red-500' />}
                                 text='Email'

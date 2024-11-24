@@ -1,6 +1,5 @@
 import MainPage from "@/ui/MainPage";
 import Navbar from "@/ui/Navbar";
-// import { allPosts } from 'contentlayer/generated'
 
 export default function Home() {
   return (

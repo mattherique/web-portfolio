@@ -225,3 +225,36 @@ body {
 .animation-skill-block:nth-child(11){
   transition-delay: 1500ms;
 }
+
+.image-background{
+  background: 
+    linear-gradient(to bottom, white, rgba(255, 255, 255, 0) 20%), /* Top gradient */
+    linear-gradient(to top, white, rgba(255, 255, 255, 0) 20%),  /* Bottom gradient */
+    url('/cartoon-cloud.jpg'); /* Background image */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  animation: parallax 10s infinite alternate;
+}
+
+.nav-animation{
+  animation: navbar-animation 600ms;
+}
+
+@keyframes navbar-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes parallax {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}

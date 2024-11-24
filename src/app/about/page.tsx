@@ -10,7 +10,7 @@ import {
 } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiDjango } from "react-icons/si";
-import { FaComments, FaLightbulb, FaPython, FaSyncAlt } from "react-icons/fa";
+import { FaLightbulb, FaPython, FaSyncAlt } from "react-icons/fa";
 import { FaHtml5, FaCss3Alt, FaCode, FaGitAlt } from "react-icons/fa6";
 import { IoPeopleSharp } from "react-icons/io5";
 import { FaAws } from "react-icons/fa";
@@ -102,28 +102,28 @@ const AboutPage: React.FC = () => {
                     </div>
                 </div>
                 <div className='animation-block mb-10'>
-                    <div className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation'>
+                    <div className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation bg-white'>
                         <FaCode className='w-12 h-12 text-red-500'/>
                         <div>
                             <p className='text-center mb-1'>Best Practices</p>
                             <p className='text-center text-gray-500'>Ensuring clean, maintainable, and efficient code. This includes writing readable code, following design patterns, and conducting thorough testing.</p>
                         </div>
                     </div>
-                    <div data-right className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation'>
+                    <div data-right className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation bg-white'>
                         <IoPeopleSharp className='w-12 h-12 text-lime-500'/>
                         <div>
                             <p className='text-center text-black'>Colaboration</p>
                             <p className='text-center text-gray-500'>Working effectively within a team environment, communicating clearly, and collaborating on projects to achieve common goals.</p>
                         </div>
                     </div>
-                    <div className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation'>
+                    <div className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation bg-white'>
                         <FaLightbulb className='w-12 h-12 text-yellow-500'/>
                         <div>
                             <p className='text-center mb-1'>Problem Solving</p>
                             <p className='text-center text-gray-500'>Identifying issues, analyzing information, and finding effective solutions to complex problems.</p>
                         </div>
                     </div>
-                    <div data-right className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation'>
+                    <div data-right className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation bg-white'>
                         <FaSyncAlt className='w-12 h-12 text-blue-500'/>
                         <div>
                             <p className='text-center mb-1'>Adaptability</p>

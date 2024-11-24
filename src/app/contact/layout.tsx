@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <header>
                 <Navbar/>
             </header>
-            <main className="w-full">
+            <main className="w-full h-[600px] image-background">
                 {children}
             </main>
         </div>
