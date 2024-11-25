@@ -4,7 +4,7 @@ import { annotate } from 'rough-notation';
 const TsIntroductionSection = () => {
     useEffect(() => {
         const element = document.querySelector('#codebase') as HTMLElement;
-        console.log(element)
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
             if (entry.isIntersecting) {
