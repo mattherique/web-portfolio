@@ -38,9 +38,9 @@ const AboutPage: React.FC = () => {
     }, []);
 
     return (
-        <div className='w-full flex justify-center'>
-            <div className='flex flex-col gap-y-20 mx-4 xl:mx-auto w-full max-w-3xl xl:max-w-6xl font-[family-name:var(--font-wotfard)] justify-center text-black my-10 lg:my-20'>
-                <div className='w-full'>
+        <div className='w-full h-full'>
+            <div className='flex  h-full flex-col gap-y-20 px-4 xl:mx-auto w-full max-w-3xl xl:max-w-6xl font-[family-name:var(--font-wotfard)] justify-center text-black my-10 lg:my-20 overflow-x-hidden'>
+                <div className='w-full h-full'>
                     <h1 className='text-4xl mb-6'>{'Who Am I'}</h1>
                     <div className='flex flex-col gap-y-5'>
                         <p className='text-lg lg:text-xl text-gray-500'>
