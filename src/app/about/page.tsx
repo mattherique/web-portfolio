@@ -39,7 +39,7 @@ const AboutPage: React.FC = () => {
 
     return (
         <div className='w-full h-full'>
-            <div className='flex  h-full flex-col gap-y-20 px-4 xl:mx-auto w-full max-w-3xl xl:max-w-6xl font-[family-name:var(--font-wotfard)] justify-center text-black my-10 lg:my-20 overflow-x-hidden'>
+            <div className='mx-4 sm:mx-auto max-w-3xl xl:max-w-6xl flex h-full flex-col gap-y-20 px-4 w-full font-[family-name:var(--font-wotfard)] justify-center text-black my-10 lg:my-20 overflow-x-hidden'>
                 <div className='w-full h-full'>
                     <h1 className='text-4xl mb-6'>{'Who Am I'}</h1>
                     <div className='flex flex-col gap-y-5'>
@@ -106,7 +106,7 @@ const AboutPage: React.FC = () => {
                             <p className='text-center text-gray-500'>{"Ensuring clean, maintainable, and efficient code. This includes writing readable code, following design patterns, and conducting thorough testing."}</p>
                         </div>
                     </div>
-                    <div data-right className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation bg-white'>
+                    <div data-right={true} className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation bg-white'>
                         <IoPeopleSharp className='w-12 h-12 text-lime-500'/>
                         <div>
                             <p className='text-center text-black'>Colaboration</p>
@@ -120,7 +120,7 @@ const AboutPage: React.FC = () => {
                             <p className='text-center text-gray-500'>{"Identifying issues, analyzing information, and finding effective solutions to complex problems."}</p>
                         </div>
                     </div>
-                    <div data-right className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation bg-white'>
+                    <div data-right={true} className='flex flex-col items-center flex-grow basis-[calc(100%-12px)] sm:basis-[calc(50%-12px)] border rounded-xl shadow-xl gap-y-4 px-4 py-6 hidden-animation bg-white'>
                         <FaSyncAlt className='w-12 h-12 text-blue-500'/>
                         <div>
                             <p className='text-center mb-1'>Adaptability</p>

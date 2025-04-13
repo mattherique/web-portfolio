@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
-        <div className="w-full image-background h-full" data-cover>
+        <div className="w-full image-background h-full" data-cover={true}>
             <header>
                 <Navbar/>
             </header>
-            <main className='xl:mx-auto w-full max-w-6xl h-full flex flex-col gap-y-20'>
+            <main className='w-full'>
                 {children}
             </main>
         </div>

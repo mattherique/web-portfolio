@@ -1,7 +1,7 @@
 import Link from "next/link"
 import React from "react"
 
-import { postsPreview } from "../../../constants/posts"
+import { postsPreview } from "@/constants/posts"
 
 const AllPosts = () => {
     return (

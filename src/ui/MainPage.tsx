@@ -35,8 +35,8 @@ const MainPage = () => {
     return (  
         <>  
             <div className='w-full h-[calc(100vh-4rem)] flex flex-col gap-y-20 image-background'>
-                <div className='mx-4 xl:mx-auto max-w-3xl xl:max-w-6xl'>
-                    <div className='w-auto xl:w-[70%]'>
+                <div className='mx-4 sm:mx-auto max-w-3xl xl:max-w-6xl'>
+                    <div className='w-full xl:w-[70%]'>
                         <h1 className='text-5xl mt-20 text-animation text-black font-semibold'>{"Hey! I'm Mathew, a software developer"}</h1>
                         <div className='mt-10 flex text-black flex-col gap-y-4'>
                             <p className='text-xl text-animation'>{"With nearly three years of web development experience, I focus on maximizing the potential of web applications through "}<span className='whitespace-nowrap' id="code-quality">{"clean, scalable, and flexible code, "}</span>{"currently, I work on a project using Next.js and React, where I am responsible for maintaining a simple yet robust code structure. I also oversee the team's contributions, ensuring code quality and adherence to"}<span className='whitespace-nowrap' id="best-practices">{"best practices"}</span>.</p>

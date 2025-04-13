@@ -30,7 +30,7 @@ const ContactMe = () => {
                             <SkillBlock
                                 icon={<FaLinkedin className='w-16 h-16 text-blue-600' />}
                                 text='Linkedin'
-                                link="https://www.linkedin.com/in/matheus-henrique-0a8450135/"
+                                link="https://www.linkedin.com/in/matheus-henrique-de-azevedo/"
                             />
                             <SkillBlock
                                 icon={<FaInstagram className='w-16 h-16 text-purple-500' />}

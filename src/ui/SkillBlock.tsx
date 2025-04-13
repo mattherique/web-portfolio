@@ -12,11 +12,12 @@ const SkillBlock = ({icon, text, link=''}: SkillBlockProps) => {
     }
 
     return (
-        <div 
+        <div
+            onClick={handleLinkRedirect}
             data-link={link !== ''}
             className='border data-[link=true]:cursor-pointer bg-white p-3 flex flex-col gap-y-2 items-center shadow-xl flex-grow rounded-xl w-32 basis-[128px] hidden-animation animation-skill-block'>
             {icon}
-            <a onClick={handleLinkRedirect}>{text}</a>
+            {text}
         </div>
     );
 };
